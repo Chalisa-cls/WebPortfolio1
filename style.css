@@ -1,0 +1,109 @@
+/* Variable และ Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #4070F4;
+    --text-color: #1E293B;
+    --footer-bg: #0B0D17;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0; width: 100%;
+    padding: 20px 10%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: #fff; z-index: 1000;
+}
+
+.logo { font-weight: 700; color: var(--text-color); text-decoration: none; }
+
+.navbar a {
+    text-decoration: none; color: var(--text-color);
+    margin-left: 35px; font-weight: 500;
+}
+
+/* Common Section Styles */
+.section { padding: 100px 10% 60px; }
+
+.section-title {
+    text-align: center; font-size: 2rem; margin-bottom: 60px; position: relative;
+}
+
+.section-title::after {
+    content: ''; position: absolute; width: 50px; height: 3px;
+    background: var(--primary-color); bottom: -10px; left: 50%; transform: translateX(-50%);
+}
+
+/* Home Section */
+.home { height: 100vh; display: flex; align-items: center; justify-content: space-between; }
+.home-text h1 { font-size: 3.5rem; line-height: 1.2; }
+.highlight { color: var(--primary-color); }
+
+.btn {
+    display: inline-block; padding: 12px 30px; background: var(--primary-color);
+    color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 20px;
+}
+
+.social-icons { margin-top: 30px; }
+.social-icons a { font-size: 1.5rem; color: var(--primary-color); margin-right: 20px; }
+
+.blob {
+    width: 400px; height: 400px; background: var(--primary-color);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    overflow: hidden; display: flex; align-items: flex-end;
+}
+.blob img { width: 100%; }
+
+/* About & Table */
+.about-container { display: flex; gap: 50px; align-items: center; }
+.about-pic { width: 400px; border-radius: 12px; }
+
+.edu-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.edu-table th { background: var(--primary-color); color: #fff; padding: 12px; text-align: left; }
+.edu-table td { border: 1px solid #ddd; padding: 12px; }
+
+/* Skills Card Style (รูปที่ 7) */
+.skills-container { display: flex; gap: 50px; align-items: center; }
+.skills-content, .skills-img { flex: 1; }
+.skills-img img { width: 100%; border-radius: 12px; }
+
+.skill-card {
+    background: #fff; padding: 20px; margin-bottom: 20px;
+    border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.skill-info { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 600; }
+.progress-line { height: 7px; background: #eee; border-radius: 10px; }
+.progress-line span { height: 100%; background: var(--primary-color); display: block; border-radius: 10px; }
+
+.html { width: 95%; } .css { width: 80%; } .js { width: 65%; }
+
+/* Work Grid (6 รูป) */
+.work-container {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.work-img { overflow: hidden; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.work-img img { width: 100%; display: block; transition: 0.3s; }
+.work-img img:hover { transform: scale(1.1); }
+
+/* Contact Form */
+.contact-container { max-width: 600px; margin: 0 auto; }
+.contact-input {
+    width: 100%; padding: 15px; border: 1px solid #ccc; 
+    border-radius: 8px; margin-bottom: 15px; outline: none;
+}
+
+/* Footer */
+.footer {
+    background: var(--footer-bg); color: #fff; text-align: center; padding: 50px 0;
+}
+.footer-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; }
+.footer-social a { color: #fff; font-size: 1.5rem; margin: 0 15px; }
+.footer-copy { margin-top: 30px; opacity: 0.6; font-size: 0.8rem; }
